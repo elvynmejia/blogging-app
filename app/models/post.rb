@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
-	#has many comments 
-	#has_many: comments 
+	validates :title, :body, presence: true
 	has_many :comments, dependent: :destroy
+	#Validate	presence	of	the	Post’s	title
+	#Validate	presence	of	the	Post’s	body
+
 end
