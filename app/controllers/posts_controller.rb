@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
+  #filter
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  #Allow users to be able to see and index of all the posts or see a particular post
+  before_action :authenticate, except: [:index, :show]
 
   # GET /posts
   # GET /posts.json
@@ -28,6 +31,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+                                  #post_url(@post)
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
@@ -71,4 +75,11 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body)
     end
+
+        #Authenticate function filter before_action: :authenticate
+    def authenticate
+      authenticate_or_request_with_http_basic do |name, password|
+        name == "admin" && password == "secret"
+      end 
+    end 
 end

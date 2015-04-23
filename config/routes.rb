@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :comments
+  #Not needed anymore since we are embedding comments within posts
+  #user no longer need to access comments without posts
+  #resources :comments
 
   resources :posts do 
     resources :comments
