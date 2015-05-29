@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		<h1>Welcome to my Toy Blog App</h1>
+		<h2>This is not a real blog app!</h2>
+	</header>
+	
+	<div id="navbar">
+		<ul>
+			<li><%= link_to "About", '#' %></li>
+			<li><%= link_to "Contact", "#" %></li>
+		</ul>
+	</div>
 
 <%= yield %>
 
