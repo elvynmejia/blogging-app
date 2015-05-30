@@ -4,19 +4,24 @@
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<header>
-		<h1>Welcome to my Toy Blog App</h1>
-		<h2>This is not a real blog app!</h2>
+		<div class="jumbotron">
+			<h1>Welcome to my Blog App</h1>
+			<%= image_tag("emejia.png", :alt => "Profile picture", class: "myimg")%>
+
+		</div>
+
 	</header>
 	
 	<div id="navbar">
 		<ul>
 			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "About", '#' %></li>
-			<li><%= link_to "Contact", "#" %></li>
+			<li><%= link_to "About", about_path %></li>
+			<li><%= link_to "Contact", contact_path %></li>
 		</ul>
 	</div>
 
