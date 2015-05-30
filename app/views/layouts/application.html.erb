@@ -2,30 +2,22 @@
 <html>
 <head>
   <title>Blog</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<h1>Welcome to my Blog</h1>
-		<%= image_tag("emejia.png", :alt => "Profile picture", class: "myimg")%>
-		<h2>Hi, my name is Elvyn Mejia</br>
-			I am a full stack Ruby on Rails engineer</br>
-			I love writing clean, elegant, maintainable and clean code</br>
-			Also, I love <strong>pugs</strong>.
-		</h2>
-	</header>
-	
+
 	<div id="navbar">
 		<ul>
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "About", about_path %></li>
-			<li><%= link_to "Contact", contact_path %></li>
+			<li><%= link_to "HOME", root_path %></li>
+			<li><%= link_to "ABOUT", about_path %></li>
+			<li><%= link_to "CONTACT", contact_path %></li>
 		</ul>
 	</div>
-
 <%= yield %>
 
 </body>
