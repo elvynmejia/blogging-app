@@ -7,6 +7,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,7 +19,10 @@
 			<li><%= link_to "CONTACT", contact_path %></li>
 		</ul>
 	</div>
+
 <%= yield %>
+
+<%= render 'layouts/footer'%>
 
 </body>
 </html>

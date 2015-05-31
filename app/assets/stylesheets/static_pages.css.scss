@@ -1,3 +1,29 @@
 // Place all the styles related to the static-pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1,h2,h3{
+	text-align: center;
+}
+
+div.some-class{
+	height: auto;
+  	background-size: cover;
+  	position: relative;
+  	margin: 5px 0 0 0;
+  	border-radius: 12px;
+  	padding: 20px;
+}
+
+small {
+  opacity: 0;
+}
+.show-description{
+	background-color: #1abc9c;
+}
+.show-description p {
+	height:auto;
+}
+
+.show-description small {
+  opacity: 1;
+}

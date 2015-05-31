@@ -4,6 +4,7 @@ body {
   line-height: 18px;
   display: block;
   margin: 0px;;
+  height: 100%;
 }
 
 /*Navigation bar*/
@@ -38,12 +39,13 @@ div#navbar ul, li, a{
 
 header{
   width: 100%;
-  height: auto;
-  background: #e74c3c;
   text-align: center;
   margin: 0px;
   color: #f1c40f;
   padding-bottom: 20px;
+  background-image: linear-gradient(to bottom, #e74c3c, #e74c3c 50%, #c0392b 50%, #c0392b);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header h1{
@@ -54,9 +56,6 @@ header h2{
   position: relative;
 }
 
-em{
-  font-size: 18px;
-}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -117,4 +116,19 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+
+#footer{
+  width: 100%;
+  max-width:100%;
+  min-width: 100px;
+  background-color: #2c3e50;
+  text-align: center;
+  color: #ecf0f1;
+  font-family: 'Vollkorn', serif;
+  font-weight: 500px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
 }
