@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   #Not needed anymore since we are embedding comments within posts
   #user no longer need to access comments without posts
   #resources :comments
-  root  'posts#index'
+  root  'static_pages#index'
 
   match 'about',    to: 'static_pages#about',   via: 'get'
   match 'contact',  to: 'static_pages#contact', via: 'get'

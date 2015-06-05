@@ -83,13 +83,13 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #000 !important;
   &:visited {
-    color: #666;
+    color: #666 !important;
   }
   &:hover {
-    color: #fff;
-    background-color: #2ecc71;
+    color: #fff !important;
+    background-color: #2ecc71 !important;
   }
 }
 

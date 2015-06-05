@@ -1,5 +1,3 @@
-<%= render 'layouts/header'%>
-
 <div class="container">
   <p id="notice"><%= notice %></p>
 
@@ -21,7 +19,7 @@
           <td><%= post.body %></td>
           <td><%= link_to 'Show', post %></td>
           <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Delete this post!', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete this post', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -29,5 +27,5 @@
 
   <br>
 
-  <%= link_to 'New Post', new_post_path %>
+  <%= link_to 'New Post', new_post_path, class: "btn btn-primary"%>
 </div>
