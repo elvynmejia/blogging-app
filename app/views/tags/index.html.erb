@@ -1,0 +1,8 @@
+<div class="container">
+	<p id="notice"><%= notice %></p>
+	<h1>All Tags</h1>
+	<% @tags.each do |tag|%>
+		</br><li><%= link_to tag.name, tag_path(tag) %></li>
+		<li><%= link_to 'Delete this tag', tag, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+	<% end %>
+</div>

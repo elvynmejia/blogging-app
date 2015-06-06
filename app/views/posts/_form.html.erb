@@ -19,6 +19,13 @@
     <%= f.label :body, "Post body"%><br>
     <%= f.text_area :body %>
   </div>
+  <!---tags interface -->
+    <div class="field">
+    <%= f.label :tag_list %><br>
+    <%= f.text_field :tag_list %>
+  </div>
+
+
   <div class="actions">
     <%= f.submit "Create post", class: "btn btn-primary" %>
   </div>

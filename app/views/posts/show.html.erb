@@ -5,6 +5,13 @@
 	  <strong>Title:</strong>
 	  <%= @post.title %>
 	</p>
+	
+	<p>
+	  <strong>Tags:</strong>
+	  <% @post.tags.each do |tag| %>
+		  <%= link_to tag.name, tag_path(tag) %>
+	  <% end %>
+	</p>
 
 	<p>
 	  <strong>Body:</strong>
