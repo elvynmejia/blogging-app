@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Blog</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Blog</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="logo">
-            <div class="ts-opacity">
-              <h1>t.Sprinkless</h1>
-            </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="logo">
+              <div class="ts-opacity">
+                <h1>t.Sprinkless</h1>
+              </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-	<div id="navbar">
-		<ul>
-			<li><%= link_to "HOME", root_path %></li>
-			<li><%= link_to "ABOUT", about_path %></li>
-			<li><%= link_to "CONTACT", contact_path %></li>
-      <li><%= link_to "POSTS", posts_path %></li>
-		</ul>
-	</div>
+  	<div class="container-fluid" id="navbar">
+  		<ul>
+  			<li><%= link_to "HOME", root_path %></li>
+  			<li><%= link_to "ABOUT", about_path %></li>
+  			<li><%= link_to "CONTACT", contact_path %></li>
+        <li><%= link_to "POSTS", posts_path %></li>
+          <% if logged_in? %>
+            <li><%= "Logged in as #{current_user.username}" %></li>
+            <li><%= link_to "LOGOUT", logout_path %></li>
+            <% else %>
+            <li><%= link_to "LOGIN", login_path %></li>
+            <li><%= link_to 'SIGNUP', new_user_path %></li>
+          <% end %>
+  		</ul>
+  	</div>
 
-<%= yield %>
+   
+      <%= yield %>
 
-</body>
+  </body>
 </html>

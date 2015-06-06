@@ -12,6 +12,14 @@ Rails.application.routes.draw do
   end 
 
   resources :tags
+  resources :users
+
+  resources :user_sessions, only: [:new, :create, :destroy ]
+
+  #create aliases to user sessions actions
+  get 'login'     => 'user_sessions#new'
+  get 'logout'    => 'user_sessions#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
