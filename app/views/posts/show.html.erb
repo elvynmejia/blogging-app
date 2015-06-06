@@ -5,6 +5,12 @@
 	  <strong>Title:</strong>
 	  <%= @post.title %>
 	</p>
+
+	<p>
+		<% if @post.image.exists? %>
+      		<%= image_tag @post.image.url %><br>
+    	<% end %>
+	</p>
 	
 	<p>
 	  <strong>Tags:</strong>
